@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="input-field col s12">
+
+      <!-- Добавляем ng модель, чтобы мы могли следить за изменениями.
+      Байндим значение данного input на переменную size. (2 шаг - функционал страницы setup)
+      Теперь в setup-page-component.ts нам нужно эту переменную size создать (3.0 шаг - функционал страницы setup) -->
+      <input [(ngModel)]="size" id="first_name2" type="text" class="validate">
+      <label class="active" for="first_name2">Количество пользователей</label>
+
+      <!-- При клике на данную кнопку мы будем менять состояние и количество записей, которые грузятся у нас с сервера.
+      На кнопку вешаем событие click и сюда будет передаваться call back onChange(). (4.1 шаг - функционал страницы setup)
+      Данный call back onChange() мы создадим в setup-page-component.ts. (5.0 шаг - функционал страницы setup) -->
+    </div>
+    <a class="waves-effect waves-light btn" (click)="onChange()">Изменить</a>
+</div>
